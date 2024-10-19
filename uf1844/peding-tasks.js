@@ -1,6 +1,5 @@
-
-function filterPendingTaks(tasks) {
-
+function filterPendingTasks(tasks) {
+  return tasks.filter((task) => task.completed === false); // Use filter to return only pending tasks
 }
 
 const tasks = [
@@ -10,10 +9,10 @@ const tasks = [
   { task: "Clean the house", completed: true },
 ];
 
-const result = filterPendingTaks(tasks);
+const result = filterPendingTasks(tasks);
 console.log(result);
 /**
- * // Pending tasks
-  { task: "Exercise", completed: false },
-  { task: "Study programming", completed: false }
+ * // Expected Output:
+ *  [ { task: "Exercise", completed: false },
+ *    { task: "Study programming", completed: false } ]
  */
